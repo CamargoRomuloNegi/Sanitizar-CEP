@@ -1,0 +1,1001 @@
+﻿linha;cenario;confianca;cep_original;esperado_diag;esperado_status;esperado_cidade;esperado_uf
+1;EXPLORATORIO;sem_gabarito;64794249;*;*;*;*
+2;ANCORA_PONTO_HIFEN;provavel;88.010-001;OK;OK Cidade e UF;Florianópolis;SC
+3;CEP_5_DIGITOS;deterministico;91193   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+4;EXPLORATORIO;sem_gabarito;55584771;*;*;*;*
+5;ANCORA_ESPACOS;provavel; 40020000;OK;OK Cidade e UF;Salvador;BA
+6;CEP_INVALIDO;deterministico;197350;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+7;CEP_5_DIGITOS;deterministico;71287   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+8;EXPLORATORIO;sem_gabarito;12320191;*;*;*;*
+9;FORA_DO_FILTRO;deterministico;64441776;FORA_DO_FILTRO;;;
+10;ANCORA_ESPACOS;provavel;  80010000 ;OK;OK Cidade e UF;Curitiba;PR
+11;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+12;EXPLORATORIO;sem_gabarito;30069243;*;*;*;*
+13;ANCORA_FLOAT_EXCEL;provavel;80010000.0;OK;OK Cidade e UF;Curitiba;PR
+14;EXPLORATORIO;sem_gabarito;83145290;*;*;*;*
+15;EXPLORATORIO;sem_gabarito;43911484;*;*;*;*
+16;ANCORA_ESPACOS;verificado;  01001000 ;OK;OK Cidade e UF;São Paulo;SP
+17;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+18;CEP_VAZIO;deterministico;NULL;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+19;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+20;EXPLORATORIO;sem_gabarito;96239838;*;*;*;*
+21;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+22;ANCORA_ESPACOS;provavel; 80010000;OK;OK Cidade e UF;Curitiba;PR
+23;EXPLORATORIO;sem_gabarito;91870535;*;*;*;*
+24;CEP_INVALIDO;deterministico;764531;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+25;ANCORA_ESPACOS;provavel; 80010000;OK;OK Cidade e UF;Curitiba;PR
+26;EXPLORATORIO;sem_gabarito;87612114;*;*;*;*
+27;FORA_DO_FILTRO;deterministico;12717913;FORA_DO_FILTRO;;;
+28;FORA_DO_FILTRO;deterministico;50837768;FORA_DO_FILTRO;;;
+29;CEP_INVALIDO;deterministico;452467;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+30;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+31;EXPLORATORIO;sem_gabarito;60973286;*;*;*;*
+32;EXPLORATORIO;sem_gabarito;05515367;*;*;*;*
+33;CEP_5_DIGITOS;deterministico;32821   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+34;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+35;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+36;EXPLORATORIO;sem_gabarito;15803705;*;*;*;*
+37;ANCORA_UF_DIVERGENTE;provavel;20040020;OK;Rever - CIDADE ou UF;Rio de Janeiro;RJ
+38;EXPLORATORIO;sem_gabarito;59506902;*;*;*;*
+39;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+40;CEP_INVALIDO;deterministico;742010;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+41;CEP_7_DIGITOS;deterministico;7004001 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+42;CEP_7_DIGITOS;deterministico;3597206 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+43;CEP_VAZIO;deterministico;nan;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+44;EXPLORATORIO;sem_gabarito;14861572;*;*;*;*
+45;FORA_DO_FILTRO;deterministico;19555684;FORA_DO_FILTRO;;;
+46;ANCORA_PONTO_HIFEN;provavel;01.310-100;OK;OK Cidade e UF;São Paulo;SP
+47;EXPLORATORIO;sem_gabarito;25525312;*;*;*;*
+48;FORA_DO_FILTRO;deterministico;92510339;FORA_DO_FILTRO;;;
+49;EXPLORATORIO;sem_gabarito;34814721;*;*;*;*
+50;EXPLORATORIO;sem_gabarito;73042326;*;*;*;*
+51;EXPLORATORIO;sem_gabarito;28536973;*;*;*;*
+52;EXPLORATORIO;sem_gabarito;52726500;*;*;*;*
+53;ANCORA_ESPACOS;provavel;90010000   ;OK;OK Cidade e UF;Porto Alegre;RS
+54;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+55;CEP_5_DIGITOS;deterministico;71965   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+56;FORA_DO_FILTRO;deterministico;14417742;FORA_DO_FILTRO;;;
+57;CEP_7_DIGITOS;deterministico;6652443 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+58;EXPLORATORIO;sem_gabarito;32511155;*;*;*;*
+59;ANCORA_FLOAT_EXCEL;provavel;40020000.0;OK;OK Cidade e UF;Salvador;BA
+60;EXPLORATORIO;sem_gabarito;59088794;*;*;*;*
+61;EXPLORATORIO;sem_gabarito;76538242;*;*;*;*
+62;EXPLORATORIO;sem_gabarito;47043029;*;*;*;*
+63;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+64;ANCORA_ESPACOS;provavel; 90010000;OK;OK Cidade e UF;Porto Alegre;RS
+65;ANCORA_CIDADE_DIVERGENTE;provavel;66010000;OK;Rever - CIDADE ou UF;Belém;PA
+66;FORA_DO_FILTRO;deterministico;88352767;FORA_DO_FILTRO;;;
+67;FORA_DO_FILTRO;deterministico;28936719;FORA_DO_FILTRO;;;
+68;EXPLORATORIO;sem_gabarito;88605096;*;*;*;*
+69;ANCORA_CIDADE_DIVERGENTE;provavel;70040010;OK;Rever - CIDADE ou UF;Brasília;DF
+70;EXPLORATORIO;sem_gabarito;30175951;*;*;*;*
+71;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+72;EXPLORATORIO;sem_gabarito;38359478;*;*;*;*
+73;EXPLORATORIO;sem_gabarito;98759896;*;*;*;*
+74;CEP_7_DIGITOS;deterministico;3013001 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+75;ANCORA_LIMPO;provavel;40020000;OK;OK Cidade e UF;Salvador;BA
+76;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+77;FORA_DO_FILTRO;deterministico;41957086;FORA_DO_FILTRO;;;
+78;EXPLORATORIO;sem_gabarito;69657875;*;*;*;*
+79;EXPLORATORIO;sem_gabarito;37458930;*;*;*;*
+80;EXPLORATORIO;sem_gabarito;62663552;*;*;*;*
+81;CEP_5_DIGITOS;deterministico;13946   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+82;CEP_INVALIDO;deterministico;827576;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+83;EXPLORATORIO;sem_gabarito;31565661;*;*;*;*
+84;EXPLORATORIO;sem_gabarito;84804211;*;*;*;*
+85;ANCORA_LIMPO;provavel;88010001;OK;OK Cidade e UF;Florianópolis;SC
+86;EXPLORATORIO;sem_gabarito;15624537;*;*;*;*
+87;ANCORA_UF_DIVERGENTE;provavel;20040020;OK;Rever - CIDADE ou UF;Rio de Janeiro;RJ
+88;CEP_VAZIO;deterministico;        ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+89;EXPLORATORIO;sem_gabarito;25527598;*;*;*;*
+90;ANCORA_PONTO_HIFEN;provavel;90.010-000;OK;OK Cidade e UF;Porto Alegre;RS
+91;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+92;ANCORA_PONTO_HIFEN;provavel;90.010-000;OK;OK Cidade e UF;Porto Alegre;RS
+93;CEP_INVALIDO;deterministico;316961603;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+94;EXPLORATORIO;sem_gabarito;54062722;*;*;*;*
+95;FORA_DO_FILTRO;deterministico;28876440;FORA_DO_FILTRO;;;
+96;CEP_VAZIO;deterministico;NULL;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+97;ANCORA_CIDADE_DIVERGENTE;provavel;20040020;OK;Rever - CIDADE ou UF;Rio de Janeiro;RJ
+98;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+99;FORA_DO_FILTRO;deterministico;26814960;FORA_DO_FILTRO;;;
+100;EXPLORATORIO;sem_gabarito;35413438;*;*;*;*
+101;EXPLORATORIO;sem_gabarito;34239895;*;*;*;*
+102;CEP_7_DIGITOS;deterministico;8801000 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+103;CEP_VAZIO;deterministico;        ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+104;EXPLORATORIO;sem_gabarito;75207596;*;*;*;*
+105;CEP_INVALIDO;deterministico;1981907H;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+106;CEP_VAZIO;deterministico;        ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+107;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+108;EXPLORATORIO;sem_gabarito;50801736;*;*;*;*
+109;ANCORA_LIMPO;provavel;30130010;OK;OK Cidade e UF;Belo Horizonte;MG
+110;FORA_DO_FILTRO;deterministico;30130010;FORA_DO_FILTRO;;;
+111;CEP_5_DIGITOS;deterministico;53892   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+112;EXPLORATORIO;sem_gabarito;42312179;*;*;*;*
+113;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+114;ANCORA_UF_DIVERGENTE;provavel;66010000;OK;Rever - CIDADE ou UF;Belém;PA
+115;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+116;EXPLORATORIO;sem_gabarito;68018610;*;*;*;*
+117;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+118;ANCORA_HIFEN;verificado;01001-000;OK;OK Cidade e UF;São Paulo;SP
+119;CEP_INVALIDO;deterministico;H2618075;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+120;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+121;CEP_VAZIO;deterministico;NULL;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+122;FORA_DO_FILTRO;deterministico;30130010;FORA_DO_FILTRO;;;
+123;EXPLORATORIO;sem_gabarito;54615828;*;*;*;*
+124;EXPLORATORIO;sem_gabarito;06705303;*;*;*;*
+125;CEP_INVALIDO;deterministico;252788;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+126;ANCORA_LIMPO;provavel;40020000;OK;OK Cidade e UF;Salvador;BA
+127;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+128;ANCORA_ESPACOS;provavel;  40020000 ;OK;OK Cidade e UF;Salvador;BA
+129;EXPLORATORIO;sem_gabarito;25480493;*;*;*;*
+130;EXPLORATORIO;sem_gabarito;27503626;*;*;*;*
+131;FORA_DO_FILTRO;deterministico;60193419;FORA_DO_FILTRO;;;
+132;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+133;ANCORA_LIMPO;provavel;88010001;OK;OK Cidade e UF;Florianópolis;SC
+134;EXPLORATORIO;sem_gabarito;32875278;*;*;*;*
+135;NAO_EXISTE_PROVAVEL;provavel;11111111;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+136;EXPLORATORIO;sem_gabarito;69709825;*;*;*;*
+137;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+138;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+139;EXPLORATORIO;sem_gabarito;54202186;*;*;*;*
+140;CEP_5_DIGITOS;deterministico;49055   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+141;CEP_5_DIGITOS;deterministico;78308   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+142;CEP_INVALIDO;deterministico;102395470;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+143;CEP_7_DIGITOS;deterministico;4744919 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+144;CEP_INVALIDO;deterministico;9992C195;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+145;ANCORA_CIDADE_DIVERGENTE;provavel;66010000;OK;Rever - CIDADE ou UF;Belém;PA
+146;EXPLORATORIO;sem_gabarito;10701204;*;*;*;*
+147;EXPLORATORIO;sem_gabarito;73387234;*;*;*;*
+148;EXPLORATORIO;sem_gabarito;14464683;*;*;*;*
+149;FORA_DO_FILTRO;deterministico;86206664;FORA_DO_FILTRO;;;
+150;CEP_INVALIDO;deterministico;73M02974;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+151;CEP_5_DIGITOS;deterministico;32185   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+152;CEP_7_DIGITOS;deterministico;0100100 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+153;CEP_5_DIGITOS;deterministico;92833   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+154;FORA_DO_FILTRO;deterministico;69443083;FORA_DO_FILTRO;;;
+155;EXPLORATORIO;sem_gabarito;54380046;*;*;*;*
+156;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+157;EXPLORATORIO;sem_gabarito;79425112;*;*;*;*
+158;EXPLORATORIO;sem_gabarito;54774039;*;*;*;*
+159;FORA_DO_FILTRO;deterministico;11044356;FORA_DO_FILTRO;;;
+160;EXPLORATORIO;sem_gabarito;31083574;*;*;*;*
+161;CEP_INVALIDO;deterministico;3D309317;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+162;FORA_DO_FILTRO;deterministico;19988184;FORA_DO_FILTRO;;;
+163;EXPLORATORIO;sem_gabarito;85124597;*;*;*;*
+164;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+165;EXPLORATORIO;sem_gabarito;46473998;*;*;*;*
+166;CEP_VAZIO;deterministico;;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+167;EXPLORATORIO;sem_gabarito;06763582;*;*;*;*
+168;EXPLORATORIO;sem_gabarito;80015590;*;*;*;*
+169;CEP_INVALIDO;deterministico;C0060519;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+170;EXPLORATORIO;sem_gabarito;67043961;*;*;*;*
+171;ANCORA_HIFEN;provavel;01310-100;OK;OK Cidade e UF;São Paulo;SP
+172;FORA_DO_FILTRO;deterministico;66191016;FORA_DO_FILTRO;;;
+173;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+174;EXPLORATORIO;sem_gabarito;69584887;*;*;*;*
+175;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+176;EXPLORATORIO;sem_gabarito;91719022;*;*;*;*
+177;EXPLORATORIO;sem_gabarito;03558266;*;*;*;*
+178;CEP_INVALIDO;deterministico;5047F923;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+179;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+180;CEP_INVALIDO;deterministico;4626A975;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+181;CEP_5_DIGITOS;deterministico;81249   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+182;NAO_EXISTE_PROVAVEL;provavel;88888888;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+183;CEP_INVALIDO;deterministico;89851L47;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+184;FORA_DO_FILTRO;deterministico;14365214;FORA_DO_FILTRO;;;
+185;EXPLORATORIO;sem_gabarito;74978434;*;*;*;*
+186;CEP_INVALIDO;deterministico;8R437717;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+187;ANCORA_HIFEN;provavel;70040-010;OK;OK Cidade e UF;Brasília;DF
+188;EXPLORATORIO;sem_gabarito;07074311;*;*;*;*
+189;CEP_INVALIDO;deterministico;1234567890123;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+190;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+191;CEP_VAZIO;deterministico; ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+192;CEP_INVALIDO;deterministico;588612;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+193;EXPLORATORIO;sem_gabarito;22778425;*;*;*;*
+194;FORA_DO_FILTRO;deterministico;30130010;FORA_DO_FILTRO;;;
+195;FORA_DO_FILTRO;deterministico;16588356;FORA_DO_FILTRO;;;
+196;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+197;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+198;FORA_DO_FILTRO;deterministico;01185407;FORA_DO_FILTRO;;;
+199;FORA_DO_FILTRO;deterministico;38501883;FORA_DO_FILTRO;;;
+200;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+201;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+202;EXPLORATORIO;sem_gabarito;16191644;*;*;*;*
+203;EXPLORATORIO;sem_gabarito;74235904;*;*;*;*
+204;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+205;FORA_DO_FILTRO;deterministico;72988650;FORA_DO_FILTRO;;;
+206;ANCORA_LIMPO;provavel;90010000;OK;OK Cidade e UF;Porto Alegre;RS
+207;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+208;FORA_DO_FILTRO;deterministico;44080197;FORA_DO_FILTRO;;;
+209;ANCORA_LIMPO;provavel;30130010;OK;OK Cidade e UF;Belo Horizonte;MG
+210;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+211;ANCORA_LIMPO;provavel;70040010;OK;OK Cidade e UF;Brasília;DF
+212;CEP_5_DIGITOS;deterministico;92049   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+213;CEP_5_DIGITOS;deterministico;66748   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+214;CEP_VAZIO;deterministico;nan;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+215;NAO_EXISTE_PROVAVEL;provavel;99999990;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+216;FORA_DO_FILTRO;deterministico;86769868;FORA_DO_FILTRO;;;
+217;EXPLORATORIO;sem_gabarito;74395580;*;*;*;*
+218;ANCORA_LIMPO;verificado;01001000;OK;OK Cidade e UF;São Paulo;SP
+219;FORA_DO_FILTRO;deterministico;86450374;FORA_DO_FILTRO;;;
+220;EXPLORATORIO;sem_gabarito;24486331;*;*;*;*
+221;CEP_INVALIDO;deterministico;236299815;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+222;CEP_7_DIGITOS;deterministico;8515286 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+223;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+224;ANCORA_UF_DIVERGENTE;provavel;90010000;OK;Rever - CIDADE ou UF;Porto Alegre;RS
+225;FORA_DO_FILTRO;deterministico;29753134;FORA_DO_FILTRO;;;
+226;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+227;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+228;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+229;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+230;EXPLORATORIO;sem_gabarito;39235249;*;*;*;*
+231;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+232;CEP_INVALIDO;deterministico;CEP;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+233;EXPLORATORIO;sem_gabarito;03399422;*;*;*;*
+234;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+235;EXPLORATORIO;sem_gabarito;50843036;*;*;*;*
+236;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+237;EXPLORATORIO;sem_gabarito;56069415;*;*;*;*
+238;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+239;CEP_5_DIGITOS;deterministico;24407   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+240;FORA_DO_FILTRO;deterministico;91937081;FORA_DO_FILTRO;;;
+241;ANCORA_LIMPO;provavel;30130010;OK;OK Cidade e UF;Belo Horizonte;MG
+242;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+243;NAO_EXISTE_PROVAVEL;provavel;99999990;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+244;ANCORA_LIMPO;provavel;88010001;OK;OK Cidade e UF;Florianópolis;SC
+245;EXPLORATORIO;sem_gabarito;01516714;*;*;*;*
+246;ANCORA_HIFEN;provavel;66010-000;OK;OK Cidade e UF;Belém;PA
+247;ANCORA_LIMPO;provavel;90010000;OK;OK Cidade e UF;Porto Alegre;RS
+248;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+249;ANCORA_LIMPO;provavel;88010001;OK;OK Cidade e UF;Florianópolis;SC
+250;CEP_INVALIDO;deterministico;982568;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+251;CEP_INVALIDO;deterministico;16605U88;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+252;ANCORA_PONTO_HIFEN;provavel;20.040-020;OK;OK Cidade e UF;Rio de Janeiro;RJ
+253;CEP_INVALIDO;deterministico;00000000;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+254;ANCORA_HIFEN;provavel;66010-000;OK;OK Cidade e UF;Belém;PA
+255;EXPLORATORIO;sem_gabarito;43250614;*;*;*;*
+256;EXPLORATORIO;sem_gabarito;92193561;*;*;*;*
+257;ANCORA_PONTO_HIFEN;provavel;30.130-010;OK;OK Cidade e UF;Belo Horizonte;MG
+258;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+259;EXPLORATORIO;sem_gabarito;65075826;*;*;*;*
+260;ANCORA_UF_DIVERGENTE;provavel;40020000;OK;Rever - CIDADE ou UF;Salvador;BA
+261;CEP_INVALIDO;deterministico;494164;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+262;CEP_INVALIDO;deterministico;123456;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+263;FORA_DO_FILTRO;deterministico;52826037;FORA_DO_FILTRO;;;
+264;FORA_DO_FILTRO;deterministico;80854066;FORA_DO_FILTRO;;;
+265;NAO_EXISTE_PROVAVEL;provavel;77777777;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+266;FORA_DO_FILTRO;deterministico;72406131;FORA_DO_FILTRO;;;
+267;FORA_DO_FILTRO;deterministico;64556213;FORA_DO_FILTRO;;;
+268;CEP_VAZIO;deterministico;        ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+269;ANCORA_FLOAT_EXCEL;provavel;90010000.0;OK;OK Cidade e UF;Porto Alegre;RS
+270;ANCORA_ESPACOS;provavel;  88010001 ;OK;OK Cidade e UF;Florianópolis;SC
+271;FORA_DO_FILTRO;deterministico;27758711;FORA_DO_FILTRO;;;
+272;EXPLORATORIO;sem_gabarito;07696935;*;*;*;*
+273;ANCORA_CIDADE_DIVERGENTE;provavel;90010000;OK;Rever - CIDADE ou UF;Porto Alegre;RS
+274;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+275;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+276;ANCORA_LIMPO;provavel;70040010;OK;OK Cidade e UF;Brasília;DF
+277;CEP_INVALIDO;deterministico;95010 10;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+278;NAO_EXISTE_PROVAVEL;provavel;55555555;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+279;FORA_DO_FILTRO;deterministico;36669275;FORA_DO_FILTRO;;;
+280;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+281;NAO_EXISTE_PROVAVEL;provavel;99999991;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+282;ANCORA_UF_DIVERGENTE;provavel;66010000;OK;Rever - CIDADE ou UF;Belém;PA
+283;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+284;ANCORA_LIMPO;provavel;30130010;OK;OK Cidade e UF;Belo Horizonte;MG
+285;CEP_VAZIO;deterministico;;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+286;ANCORA_LIMPO;provavel;01310100;OK;OK Cidade e UF;São Paulo;SP
+287;FORA_DO_FILTRO;deterministico;86578442;FORA_DO_FILTRO;;;
+288;FORA_DO_FILTRO;deterministico;78752082;FORA_DO_FILTRO;;;
+289;EXPLORATORIO;sem_gabarito;01533747;*;*;*;*
+290;FORA_DO_FILTRO;deterministico;21074048;FORA_DO_FILTRO;;;
+291;CEP_VAZIO;deterministico;;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+292;EXPLORATORIO;sem_gabarito;65676489;*;*;*;*
+293;NAO_EXISTE_PROVAVEL;provavel;99999991;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+294;EXPLORATORIO;sem_gabarito;14145860;*;*;*;*
+295;EXPLORATORIO;sem_gabarito;97428275;*;*;*;*
+296;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+297;FORA_DO_FILTRO;deterministico;92297660;FORA_DO_FILTRO;;;
+298;FORA_DO_FILTRO;deterministico;32262600;FORA_DO_FILTRO;;;
+299;CEP_INVALIDO;deterministico;ABCDEFGH;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+300;EXPLORATORIO;sem_gabarito;19860695;*;*;*;*
+301;EXPLORATORIO;sem_gabarito;64903757;*;*;*;*
+302;ANCORA_CIDADE_DIVERGENTE;provavel;80010000;OK;Rever - CIDADE ou UF;Curitiba;PR
+303;FORA_DO_FILTRO;deterministico;59843958;FORA_DO_FILTRO;;;
+304;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+305;EXPLORATORIO;sem_gabarito;35871311;*;*;*;*
+306;FORA_DO_FILTRO;deterministico;58755072;FORA_DO_FILTRO;;;
+307;CEP_5_DIGITOS;deterministico;27242   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+308;CEP_INVALIDO;deterministico;12345-67;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+309;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+310;ANCORA_HIFEN;provavel;01310-100;OK;OK Cidade e UF;São Paulo;SP
+311;EXPLORATORIO;sem_gabarito;82273831;*;*;*;*
+312;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+313;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+314;EXPLORATORIO;sem_gabarito;63296773;*;*;*;*
+315;CEP_INVALIDO;deterministico;1234567890123;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+316;FORA_DO_FILTRO;deterministico;75861029;FORA_DO_FILTRO;;;
+317;ANCORA_HIFEN;provavel;20040-020;OK;OK Cidade e UF;Rio de Janeiro;RJ
+318;FORA_DO_FILTRO;deterministico;51658846;FORA_DO_FILTRO;;;
+319;ANCORA_HIFEN;provavel;20040-020;OK;OK Cidade e UF;Rio de Janeiro;RJ
+320;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+321;CEP_INVALIDO;deterministico;230648729;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+322;EXPLORATORIO;sem_gabarito;18971692;*;*;*;*
+323;ANCORA_HIFEN;provavel;80010-000;OK;OK Cidade e UF;Curitiba;PR
+324;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+325;CEP_5_DIGITOS;deterministico;19338   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+326;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+327;CEP_INVALIDO;deterministico;1.2.3;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+328;EXPLORATORIO;sem_gabarito;54962819;*;*;*;*
+329;CEP_INVALIDO;deterministico;519740001;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+330;CEP_INVALIDO;deterministico;J6245341;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+331;ANCORA_LIMPO;provavel;01310100;OK;OK Cidade e UF;São Paulo;SP
+332;FORA_DO_FILTRO;deterministico;30130010;FORA_DO_FILTRO;;;
+333;EXPLORATORIO;sem_gabarito;49048333;*;*;*;*
+334;ANCORA_FLOAT_EXCEL;provavel;88010001.0;OK;OK Cidade e UF;Florianópolis;SC
+335;CEP_VAZIO;deterministico; ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+336;FORA_DO_FILTRO;deterministico;30130010;FORA_DO_FILTRO;;;
+337;CEP_7_DIGITOS;deterministico;8801000 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+338;EXPLORATORIO;sem_gabarito;91991896;*;*;*;*
+339;ANCORA_HIFEN;provavel;66010-000;OK;OK Cidade e UF;Belém;PA
+340;ANCORA_PONTO_HIFEN;verificado;01.001-000;OK;OK Cidade e UF;São Paulo;SP
+341;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+342;FORA_DO_FILTRO;deterministico;50700015;FORA_DO_FILTRO;;;
+343;EXPLORATORIO;sem_gabarito;18843663;*;*;*;*
+344;ANCORA_UF_DIVERGENTE;provavel;01310100;OK;Rever - CIDADE ou UF;São Paulo;SP
+345;ANCORA_HIFEN;provavel;70040-010;OK;OK Cidade e UF;Brasília;DF
+346;EXPLORATORIO;sem_gabarito;29049812;*;*;*;*
+347;ANCORA_HIFEN;provavel;80010-000;OK;OK Cidade e UF;Curitiba;PR
+348;FORA_DO_FILTRO;deterministico;30130010;FORA_DO_FILTRO;;;
+349;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+350;NAO_EXISTE_PROVAVEL;provavel;44444444;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+351;ANCORA_CIDADE_DIVERGENTE;provavel;90010000;OK;Rever - CIDADE ou UF;Porto Alegre;RS
+352;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+353;ANCORA_UF_DIVERGENTE;provavel;20040020;OK;Rever - CIDADE ou UF;Rio de Janeiro;RJ
+354;NAO_EXISTE_PROVAVEL;provavel;44444444;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+355;EXPLORATORIO;sem_gabarito;20769153;*;*;*;*
+356;FORA_DO_FILTRO;deterministico;53878534;FORA_DO_FILTRO;;;
+357;EXPLORATORIO;sem_gabarito;03984812;*;*;*;*
+358;EXPLORATORIO;sem_gabarito;02212463;*;*;*;*
+359;EXPLORATORIO;sem_gabarito;37606312;*;*;*;*
+360;EXPLORATORIO;sem_gabarito;05920233;*;*;*;*
+361;EXPLORATORIO;sem_gabarito;09973532;*;*;*;*
+362;EXPLORATORIO;sem_gabarito;14010966;*;*;*;*
+363;CEP_VAZIO;deterministico;        ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+364;CEP_VAZIO;deterministico; ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+365;ANCORA_UF_DIVERGENTE;provavel;80010000;OK;Rever - CIDADE ou UF;Curitiba;PR
+366;EXPLORATORIO;sem_gabarito;12812060;*;*;*;*
+367;CEP_INVALIDO;deterministico;683216;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+368;EXPLORATORIO;sem_gabarito;92310655;*;*;*;*
+369;FORA_DO_FILTRO;deterministico;16709641;FORA_DO_FILTRO;;;
+370;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+371;NAO_EXISTE_PROVAVEL;provavel;44444444;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+372;EXPLORATORIO;sem_gabarito;68810362;*;*;*;*
+373;CEP_7_DIGITOS;deterministico;0100100 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+374;CEP_INVALIDO;deterministico;123456;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+375;ANCORA_LIMPO;provavel;40020000;OK;OK Cidade e UF;Salvador;BA
+376;EXPLORATORIO;sem_gabarito;97488759;*;*;*;*
+377;ANCORA_PONTO_HIFEN;provavel;20.040-020;OK;OK Cidade e UF;Rio de Janeiro;RJ
+378;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+379;ANCORA_LIMPO;provavel;88010001;OK;OK Cidade e UF;Florianópolis;SC
+380;FORA_DO_FILTRO;deterministico;34418597;FORA_DO_FILTRO;;;
+381;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+382;EXPLORATORIO;sem_gabarito;96049961;*;*;*;*
+383;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+384;NAO_EXISTE_PROVAVEL;provavel;22222222;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+385;EXPLORATORIO;sem_gabarito;95693367;*;*;*;*
+386;EXPLORATORIO;sem_gabarito;31905142;*;*;*;*
+387;FORA_DO_FILTRO;deterministico;35216300;FORA_DO_FILTRO;;;
+388;CEP_INVALIDO;deterministico;316737318;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+389;FORA_DO_FILTRO;deterministico;26975540;FORA_DO_FILTRO;;;
+390;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+391;EXPLORATORIO;sem_gabarito;80806119;*;*;*;*
+392;NAO_EXISTE_PROVAVEL;provavel;99999991;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+393;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+394;ANCORA_LIMPO;provavel;01310100;OK;OK Cidade e UF;São Paulo;SP
+395;EXPLORATORIO;sem_gabarito;14562629;*;*;*;*
+396;EXPLORATORIO;sem_gabarito;77125893;*;*;*;*
+397;ANCORA_LIMPO;provavel;40020000;OK;OK Cidade e UF;Salvador;BA
+398;ANCORA_UF_DIVERGENTE;verificado;01001000;OK;Rever - CIDADE ou UF;São Paulo;SP
+399;FORA_DO_FILTRO;deterministico;25064588;FORA_DO_FILTRO;;;
+400;EXPLORATORIO;sem_gabarito;77340556;*;*;*;*
+401;ANCORA_UF_DIVERGENTE;provavel;01310100;OK;Rever - CIDADE ou UF;São Paulo;SP
+402;EXPLORATORIO;sem_gabarito;28301686;*;*;*;*
+403;FORA_DO_FILTRO;deterministico;20081186;FORA_DO_FILTRO;;;
+404;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+405;EXPLORATORIO;sem_gabarito;70905314;*;*;*;*
+406;ANCORA_LIMPO;provavel;01310100;OK;OK Cidade e UF;São Paulo;SP
+407;ANCORA_LIMPO;provavel;66010000;OK;OK Cidade e UF;Belém;PA
+408;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+409;ANCORA_LIMPO;provavel;40020000;OK;OK Cidade e UF;Salvador;BA
+410;CEP_INVALIDO;deterministico;635703369;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+411;CEP_INVALIDO;deterministico;940023513;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+412;FORA_DO_FILTRO;deterministico;30001875;FORA_DO_FILTRO;;;
+413;EXPLORATORIO;sem_gabarito;80376062;*;*;*;*
+414;EXPLORATORIO;sem_gabarito;69747206;*;*;*;*
+415;CEP_INVALIDO;deterministico;12345-67;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+416;FORA_DO_FILTRO;deterministico;58133658;FORA_DO_FILTRO;;;
+417;FORA_DO_FILTRO;deterministico;78532567;FORA_DO_FILTRO;;;
+418;EXPLORATORIO;sem_gabarito;43148076;*;*;*;*
+419;EXPLORATORIO;sem_gabarito;16670960;*;*;*;*
+420;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+421;EXPLORATORIO;sem_gabarito;80590893;*;*;*;*
+422;EXPLORATORIO;sem_gabarito;66571297;*;*;*;*
+423;FORA_DO_FILTRO;deterministico;03499366;FORA_DO_FILTRO;;;
+424;ANCORA_HIFEN;provavel;88010-001;OK;OK Cidade e UF;Florianópolis;SC
+425;EXPLORATORIO;sem_gabarito;89072764;*;*;*;*
+426;FORA_DO_FILTRO;deterministico;20659384;FORA_DO_FILTRO;;;
+427;FORA_DO_FILTRO;deterministico;62653185;FORA_DO_FILTRO;;;
+428;EXPLORATORIO;sem_gabarito;34480956;*;*;*;*
+429;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+430;EXPLORATORIO;sem_gabarito;86775763;*;*;*;*
+431;NAO_EXISTE_PROVAVEL;provavel;99999990;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+432;EXPLORATORIO;sem_gabarito;61658620;*;*;*;*
+433;FORA_DO_FILTRO;deterministico;30130010;FORA_DO_FILTRO;;;
+434;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+435;EXPLORATORIO;sem_gabarito;84792935;*;*;*;*
+436;EXPLORATORIO;sem_gabarito;32625482;*;*;*;*
+437;CEP_5_DIGITOS;deterministico;21940   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+438;CEP_INVALIDO;deterministico;894961833;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+439;CEP_INVALIDO;deterministico;950100100;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+440;EXPLORATORIO;sem_gabarito;76668080;*;*;*;*
+441;ANCORA_HIFEN;provavel;80010-000;OK;OK Cidade e UF;Curitiba;PR
+442;ANCORA_HIFEN;provavel;88010-001;OK;OK Cidade e UF;Florianópolis;SC
+443;CEP_5_DIGITOS;deterministico;54234   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+444;FORA_DO_FILTRO;deterministico;86434179;FORA_DO_FILTRO;;;
+445;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+446;FORA_DO_FILTRO;deterministico;21674609;FORA_DO_FILTRO;;;
+447;EXPLORATORIO;sem_gabarito;15499001;*;*;*;*
+448;ANCORA_LIMPO;provavel;70040010;OK;OK Cidade e UF;Brasília;DF
+449;CEP_VAZIO;deterministico; ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+450;ANCORA_LIMPO;provavel;88010001;OK;OK Cidade e UF;Florianópolis;SC
+451;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+452;CEP_INVALIDO;deterministico;0000000;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+453;FORA_DO_FILTRO;deterministico;61188858;FORA_DO_FILTRO;;;
+454;CEP_INVALIDO;deterministico;815323;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+455;EXPLORATORIO;sem_gabarito;78342120;*;*;*;*
+456;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+457;CEP_INVALIDO;deterministico;2729J900;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+458;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+459;FORA_DO_FILTRO;deterministico;70506814;FORA_DO_FILTRO;;;
+460;ANCORA_LIMPO;provavel;80010000;OK;OK Cidade e UF;Curitiba;PR
+461;ANCORA_PONTO_HIFEN;provavel;88.010-001;OK;OK Cidade e UF;Florianópolis;SC
+462;EXPLORATORIO;sem_gabarito;95606527;*;*;*;*
+463;NAO_EXISTE_PROVAVEL;provavel;99999991;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+464;EXPLORATORIO;sem_gabarito;36457931;*;*;*;*
+465;ANCORA_PONTO_HIFEN;provavel;70.040-010;OK;OK Cidade e UF;Brasília;DF
+466;NAO_EXISTE_PROVAVEL;provavel;66666666;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+467;EXPLORATORIO;sem_gabarito;92429012;*;*;*;*
+468;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+469;FORA_DO_FILTRO;deterministico;11175889;FORA_DO_FILTRO;;;
+470;CEP_INVALIDO;deterministico;950100100;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+471;EXPLORATORIO;sem_gabarito;34422585;*;*;*;*
+472;EXPLORATORIO;sem_gabarito;63245916;*;*;*;*
+473;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+474;EXPLORATORIO;sem_gabarito;49431315;*;*;*;*
+475;EXPLORATORIO;sem_gabarito;77286463;*;*;*;*
+476;EXPLORATORIO;sem_gabarito;47897884;*;*;*;*
+477;CEP_7_DIGITOS;deterministico;8189439 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+478;ANCORA_UF_DIVERGENTE;provavel;70040010;OK;Rever - CIDADE ou UF;Brasília;DF
+479;EXPLORATORIO;sem_gabarito;13923765;*;*;*;*
+480;ANCORA_CIDADE_DIVERGENTE;provavel;80010000;OK;Rever - CIDADE ou UF;Curitiba;PR
+481;FORA_DO_FILTRO;deterministico;75136072;FORA_DO_FILTRO;;;
+482;ANCORA_CIDADE_DIVERGENTE;provavel;80010000;OK;Rever - CIDADE ou UF;Curitiba;PR
+483;CEP_INVALIDO;deterministico;95010A10;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+484;EXPLORATORIO;sem_gabarito;39679592;*;*;*;*
+485;EXPLORATORIO;sem_gabarito;96894559;*;*;*;*
+486;EXPLORATORIO;sem_gabarito;66793212;*;*;*;*
+487;ANCORA_FLOAT_EXCEL;provavel;80010000.0;OK;OK Cidade e UF;Curitiba;PR
+488;ANCORA_PONTO_HIFEN;provavel;70.040-010;OK;OK Cidade e UF;Brasília;DF
+489;EXPLORATORIO;sem_gabarito;12462063;*;*;*;*
+490;CEP_VAZIO;deterministico;nan;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+491;ANCORA_LIMPO;provavel;01310100;OK;OK Cidade e UF;São Paulo;SP
+492;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+493;EXPLORATORIO;sem_gabarito;54833618;*;*;*;*
+494;FORA_DO_FILTRO;deterministico;04427100;FORA_DO_FILTRO;;;
+495;EXPLORATORIO;sem_gabarito;29869010;*;*;*;*
+496;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+497;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+498;NAO_EXISTE_PROVAVEL;provavel;66666666;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+499;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+500;EXPLORATORIO;sem_gabarito;60938641;*;*;*;*
+501;FORA_DO_FILTRO;deterministico;02676442;FORA_DO_FILTRO;;;
+502;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+503;EXPLORATORIO;sem_gabarito;83177489;*;*;*;*
+504;EXPLORATORIO;sem_gabarito;81845758;*;*;*;*
+505;EXPLORATORIO;sem_gabarito;08922866;*;*;*;*
+506;ANCORA_HIFEN;provavel;40020-000;OK;OK Cidade e UF;Salvador;BA
+507;EXPLORATORIO;sem_gabarito;84930546;*;*;*;*
+508;FORA_DO_FILTRO;deterministico;30130010;FORA_DO_FILTRO;;;
+509;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+510;FORA_DO_FILTRO;deterministico;05409218;FORA_DO_FILTRO;;;
+511;EXPLORATORIO;sem_gabarito;57049063;*;*;*;*
+512;ANCORA_CIDADE_DIVERGENTE;provavel;70040010;OK;Rever - CIDADE ou UF;Brasília;DF
+513;CEP_INVALIDO;deterministico;123456;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+514;FORA_DO_FILTRO;deterministico;45859539;FORA_DO_FILTRO;;;
+515;CEP_INVALIDO;deterministico;62B96035;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+516;EXPLORATORIO;sem_gabarito;97541185;*;*;*;*
+517;EXPLORATORIO;sem_gabarito;93587363;*;*;*;*
+518;EXPLORATORIO;sem_gabarito;91448166;*;*;*;*
+519;FORA_DO_FILTRO;deterministico;52163118;FORA_DO_FILTRO;;;
+520;FORA_DO_FILTRO;deterministico;36088465;FORA_DO_FILTRO;;;
+521;ANCORA_ESPACOS;provavel;20040020   ;OK;OK Cidade e UF;Rio de Janeiro;RJ
+522;ANCORA_PONTO_HIFEN;provavel;88.010-001;OK;OK Cidade e UF;Florianópolis;SC
+523;EXPLORATORIO;sem_gabarito;10892813;*;*;*;*
+524;EXPLORATORIO;sem_gabarito;15295476;*;*;*;*
+525;ANCORA_ESPACOS;provavel;  66010000 ;OK;OK Cidade e UF;Belém;PA
+526;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+527;ANCORA_LIMPO;provavel;70040010;OK;OK Cidade e UF;Brasília;DF
+528;CEP_INVALIDO;deterministico;950100100;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+529;EXPLORATORIO;sem_gabarito;98188348;*;*;*;*
+530;CEP_INVALIDO;deterministico;717523K8;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+531;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+532;CEP_VAZIO;deterministico;NULL;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+533;EXPLORATORIO;sem_gabarito;04059627;*;*;*;*
+534;EXPLORATORIO;sem_gabarito;45573942;*;*;*;*
+535;CEP_INVALIDO;deterministico;1.2.3;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+536;EXPLORATORIO;sem_gabarito;29633092;*;*;*;*
+537;EXPLORATORIO;sem_gabarito;80406721;*;*;*;*
+538;EXPLORATORIO;sem_gabarito;10186862;*;*;*;*
+539;ANCORA_HIFEN;provavel;01310-100;OK;OK Cidade e UF;São Paulo;SP
+540;EXPLORATORIO;sem_gabarito;95094735;*;*;*;*
+541;EXPLORATORIO;sem_gabarito;13120673;*;*;*;*
+542;FORA_DO_FILTRO;deterministico;93046069;FORA_DO_FILTRO;;;
+543;EXPLORATORIO;sem_gabarito;49424984;*;*;*;*
+544;EXPLORATORIO;sem_gabarito;07278354;*;*;*;*
+545;CEP_INVALIDO;deterministico;404887190;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+546;EXPLORATORIO;sem_gabarito;71073454;*;*;*;*
+547;NAO_EXISTE_PROVAVEL;provavel;55555555;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+548;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+549;EXPLORATORIO;sem_gabarito;31563339;*;*;*;*
+550;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+551;EXPLORATORIO;sem_gabarito;89656701;*;*;*;*
+552;ANCORA_FLOAT_EXCEL;provavel;90010000.0;OK;OK Cidade e UF;Porto Alegre;RS
+553;ANCORA_UF_DIVERGENTE;provavel;40020000;OK;Rever - CIDADE ou UF;Salvador;BA
+554;FORA_DO_FILTRO;deterministico;36401365;FORA_DO_FILTRO;;;
+555;CEP_5_DIGITOS;deterministico;65504   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+556;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+557;ANCORA_ESPACOS;provavel;01310100   ;OK;OK Cidade e UF;São Paulo;SP
+558;ANCORA_ESPACOS;provavel; 70040010;OK;OK Cidade e UF;Brasília;DF
+559;EXPLORATORIO;sem_gabarito;34499031;*;*;*;*
+560;CEP_7_DIGITOS;deterministico;3910883 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+561;EXPLORATORIO;sem_gabarito;44808859;*;*;*;*
+562;EXPLORATORIO;sem_gabarito;88542553;*;*;*;*
+563;NAO_EXISTE_PROVAVEL;provavel;99999991;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+564;EXPLORATORIO;sem_gabarito;47961572;*;*;*;*
+565;FORA_DO_FILTRO;deterministico;24034819;FORA_DO_FILTRO;;;
+566;FORA_DO_FILTRO;deterministico;49095732;FORA_DO_FILTRO;;;
+567;CEP_VAZIO;deterministico;nan;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+568;CEP_5_DIGITOS;deterministico;53836   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+569;EXPLORATORIO;sem_gabarito;73366904;*;*;*;*
+570;ANCORA_UF_DIVERGENTE;provavel;01310100;OK;Rever - CIDADE ou UF;São Paulo;SP
+571;FORA_DO_FILTRO;deterministico;43092872;FORA_DO_FILTRO;;;
+572;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+573;CEP_VAZIO;deterministico;        ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+574;FORA_DO_FILTRO;deterministico;78788296;FORA_DO_FILTRO;;;
+575;ANCORA_HIFEN;provavel;40020-000;OK;OK Cidade e UF;Salvador;BA
+576;FORA_DO_FILTRO;deterministico;87850980;FORA_DO_FILTRO;;;
+577;CEP_INVALIDO;deterministico;12-345-678;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+578;FORA_DO_FILTRO;deterministico;17045903;FORA_DO_FILTRO;;;
+579;ANCORA_LIMPO;verificado;01001000;OK;OK Cidade e UF;São Paulo;SP
+580;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+581;CEP_INVALIDO;deterministico;305150130;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+582;ANCORA_ESPACOS;provavel; 88010001;OK;OK Cidade e UF;Florianópolis;SC
+583;EXPLORATORIO;sem_gabarito;11909966;*;*;*;*
+584;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+585;FORA_DO_FILTRO;deterministico;90575185;FORA_DO_FILTRO;;;
+586;EXPLORATORIO;sem_gabarito;45213596;*;*;*;*
+587;FORA_DO_FILTRO;deterministico;44084067;FORA_DO_FILTRO;;;
+588;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+589;EXPLORATORIO;sem_gabarito;29191347;*;*;*;*
+590;CEP_INVALIDO;deterministico;95010A10;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+591;FORA_DO_FILTRO;deterministico;89945628;FORA_DO_FILTRO;;;
+592;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+593;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+594;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+595;ANCORA_UF_DIVERGENTE;provavel;88010001;OK;Rever - CIDADE ou UF;Florianópolis;SC
+596;EXPLORATORIO;sem_gabarito;29393536;*;*;*;*
+597;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+598;FORA_DO_FILTRO;deterministico;63950934;FORA_DO_FILTRO;;;
+599;EXPLORATORIO;sem_gabarito;84270663;*;*;*;*
+600;NAO_EXISTE_PROVAVEL;provavel;99999990;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+601;FORA_DO_FILTRO;deterministico;41494722;FORA_DO_FILTRO;;;
+602;CEP_INVALIDO;deterministico;12345-67;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+603;FORA_DO_FILTRO;deterministico;91176051;FORA_DO_FILTRO;;;
+604;ANCORA_ESPACOS;verificado;  01001000 ;OK;OK Cidade e UF;São Paulo;SP
+605;EXPLORATORIO;sem_gabarito;44671671;*;*;*;*
+606;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+607;EXPLORATORIO;sem_gabarito;34557458;*;*;*;*
+608;FORA_DO_FILTRO;deterministico;66949507;FORA_DO_FILTRO;;;
+609;FORA_DO_FILTRO;deterministico;97287567;FORA_DO_FILTRO;;;
+610;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+611;EXPLORATORIO;sem_gabarito;21859065;*;*;*;*
+612;ANCORA_ESPACOS;verificado; 01001000;OK;OK Cidade e UF;São Paulo;SP
+613;EXPLORATORIO;sem_gabarito;90420054;*;*;*;*
+614;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+615;FORA_DO_FILTRO;deterministico;21432317;FORA_DO_FILTRO;;;
+616;FORA_DO_FILTRO;deterministico;41025739;FORA_DO_FILTRO;;;
+617;ANCORA_LIMPO;provavel;80010000;OK;OK Cidade e UF;Curitiba;PR
+618;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+619;CEP_5_DIGITOS;deterministico;37834   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+620;NAO_EXISTE_PROVAVEL;provavel;77777777;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+621;EXPLORATORIO;sem_gabarito;79357024;*;*;*;*
+622;NAO_EXISTE_PROVAVEL;provavel;99999991;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+623;EXPLORATORIO;sem_gabarito;40375758;*;*;*;*
+624;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+625;EXPLORATORIO;sem_gabarito;06894329;*;*;*;*
+626;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+627;FORA_DO_FILTRO;deterministico;38297703;FORA_DO_FILTRO;;;
+628;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+629;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+630;FORA_DO_FILTRO;deterministico;52774484;FORA_DO_FILTRO;;;
+631;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+632;EXPLORATORIO;sem_gabarito;79634871;*;*;*;*
+633;FORA_DO_FILTRO;deterministico;03893648;FORA_DO_FILTRO;;;
+634;EXPLORATORIO;sem_gabarito;85659008;*;*;*;*
+635;CEP_INVALIDO;deterministico;929209008;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+636;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+637;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+638;EXPLORATORIO;sem_gabarito;55432438;*;*;*;*
+639;CEP_INVALIDO;deterministico;336514;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+640;FORA_DO_FILTRO;deterministico;88612083;FORA_DO_FILTRO;;;
+641;CEP_7_DIGITOS;deterministico;6601000 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+642;EXPLORATORIO;sem_gabarito;69459952;*;*;*;*
+643;EXPLORATORIO;sem_gabarito;56342189;*;*;*;*
+644;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+645;FORA_DO_FILTRO;deterministico;36023467;FORA_DO_FILTRO;;;
+646;FORA_DO_FILTRO;deterministico;50993408;FORA_DO_FILTRO;;;
+647;EXPLORATORIO;sem_gabarito;83916929;*;*;*;*
+648;EXPLORATORIO;sem_gabarito;03477412;*;*;*;*
+649;NAO_EXISTE_PROVAVEL;provavel;99999990;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+650;FORA_DO_FILTRO;deterministico;10537422;FORA_DO_FILTRO;;;
+651;CEP_INVALIDO;deterministico;539110763;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+652;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+653;CEP_5_DIGITOS;deterministico;59619   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+654;ANCORA_LIMPO;provavel;66010000;OK;OK Cidade e UF;Belém;PA
+655;EXPLORATORIO;sem_gabarito;11135016;*;*;*;*
+656;EXPLORATORIO;sem_gabarito;11515216;*;*;*;*
+657;CEP_VAZIO;deterministico; ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+658;EXPLORATORIO;sem_gabarito;35641376;*;*;*;*
+659;CEP_INVALIDO;deterministico;468624;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+660;EXPLORATORIO;sem_gabarito;41667363;*;*;*;*
+661;FORA_DO_FILTRO;deterministico;60267525;FORA_DO_FILTRO;;;
+662;NAO_EXISTE_PROVAVEL;provavel;22222222;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+663;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+664;ANCORA_ESPACOS;provavel;  30130010 ;OK;OK Cidade e UF;Belo Horizonte;MG
+665;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+666;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+667;ANCORA_LIMPO;provavel;80010000;OK;OK Cidade e UF;Curitiba;PR
+668;FORA_DO_FILTRO;deterministico;34208931;FORA_DO_FILTRO;;;
+669;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+670;EXPLORATORIO;sem_gabarito;94037091;*;*;*;*
+671;FORA_DO_FILTRO;deterministico;43338762;FORA_DO_FILTRO;;;
+672;CEP_VAZIO;deterministico;;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+673;ANCORA_LIMPO;provavel;88010001;OK;OK Cidade e UF;Florianópolis;SC
+674;FORA_DO_FILTRO;deterministico;42865921;FORA_DO_FILTRO;;;
+675;FORA_DO_FILTRO;deterministico;26659399;FORA_DO_FILTRO;;;
+676;CEP_7_DIGITOS;deterministico;6309497 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+677;FORA_DO_FILTRO;deterministico;72708764;FORA_DO_FILTRO;;;
+678;EXPLORATORIO;sem_gabarito;20229081;*;*;*;*
+679;ANCORA_HIFEN;provavel;01310-100;OK;OK Cidade e UF;São Paulo;SP
+680;CEP_INVALIDO;deterministico;214269;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+681;FORA_DO_FILTRO;deterministico;34163295;FORA_DO_FILTRO;;;
+682;EXPLORATORIO;sem_gabarito;94228663;*;*;*;*
+683;CEP_5_DIGITOS;deterministico;91418   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+684;CEP_INVALIDO;deterministico;391967;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+685;ANCORA_FLOAT_EXCEL;provavel;40020000.0;OK;OK Cidade e UF;Salvador;BA
+686;CEP_INVALIDO;deterministico;511669;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+687;FORA_DO_FILTRO;deterministico;86892776;FORA_DO_FILTRO;;;
+688;EXPLORATORIO;sem_gabarito;79496090;*;*;*;*
+689;FORA_DO_FILTRO;deterministico;23918222;FORA_DO_FILTRO;;;
+690;FORA_DO_FILTRO;deterministico;29580573;FORA_DO_FILTRO;;;
+691;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+692;FORA_DO_FILTRO;deterministico;90716552;FORA_DO_FILTRO;;;
+693;EXPLORATORIO;sem_gabarito;46612338;*;*;*;*
+694;CEP_INVALIDO;deterministico;ABCDEFGH;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+695;FORA_DO_FILTRO;deterministico;23847664;FORA_DO_FILTRO;;;
+696;CEP_INVALIDO;deterministico;2192G722;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+697;FORA_DO_FILTRO;deterministico;35389134;FORA_DO_FILTRO;;;
+698;EXPLORATORIO;sem_gabarito;30480249;*;*;*;*
+699;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+700;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+701;FORA_DO_FILTRO;deterministico;42968886;FORA_DO_FILTRO;;;
+702;EXPLORATORIO;sem_gabarito;21590785;*;*;*;*
+703;EXPLORATORIO;sem_gabarito;73892901;*;*;*;*
+704;EXPLORATORIO;sem_gabarito;52251199;*;*;*;*
+705;FORA_DO_FILTRO;deterministico;21485042;FORA_DO_FILTRO;;;
+706;EXPLORATORIO;sem_gabarito;99676860;*;*;*;*
+707;EXPLORATORIO;sem_gabarito;37212330;*;*;*;*
+708;EXPLORATORIO;sem_gabarito;06825308;*;*;*;*
+709;FORA_DO_FILTRO;deterministico;80195189;FORA_DO_FILTRO;;;
+710;NAO_EXISTE_PROVAVEL;provavel;88888888;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+711;ANCORA_HIFEN;provavel;66010-000;OK;OK Cidade e UF;Belém;PA
+712;ANCORA_LIMPO;provavel;80010000;OK;OK Cidade e UF;Curitiba;PR
+713;EXPLORATORIO;sem_gabarito;39943648;*;*;*;*
+714;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+715;CEP_INVALIDO;deterministico;562517;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+716;CEP_7_DIGITOS;deterministico;1786486 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+717;EXPLORATORIO;sem_gabarito;87702295;*;*;*;*
+718;EXPLORATORIO;sem_gabarito;75750336;*;*;*;*
+719;FORA_DO_FILTRO;deterministico;05326558;FORA_DO_FILTRO;;;
+720;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+721;EXPLORATORIO;sem_gabarito;43820157;*;*;*;*
+722;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+723;EXPLORATORIO;sem_gabarito;30126682;*;*;*;*
+724;EXPLORATORIO;sem_gabarito;06362730;*;*;*;*
+725;CEP_7_DIGITOS;deterministico;2632904 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+726;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+727;CEP_VAZIO;deterministico;nan;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+728;EXPLORATORIO;sem_gabarito;62895879;*;*;*;*
+729;CEP_INVALIDO;deterministico;CEP;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+730;EXPLORATORIO;sem_gabarito;17983934;*;*;*;*
+731;EXPLORATORIO;sem_gabarito;98974651;*;*;*;*
+732;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+733;ANCORA_HIFEN;provavel;88010-001;OK;OK Cidade e UF;Florianópolis;SC
+734;CEP_INVALIDO;deterministico;680223492;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+735;FORA_DO_FILTRO;deterministico;26367595;FORA_DO_FILTRO;;;
+736;EXPLORATORIO;sem_gabarito;46018316;*;*;*;*
+737;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+738;ANCORA_UF_DIVERGENTE;verificado;01001000;OK;Rever - CIDADE ou UF;São Paulo;SP
+739;ANCORA_LIMPO;provavel;90010000;OK;OK Cidade e UF;Porto Alegre;RS
+740;FORA_DO_FILTRO;deterministico;58000261;FORA_DO_FILTRO;;;
+741;EXPLORATORIO;sem_gabarito;77902794;*;*;*;*
+742;CEP_INVALIDO;deterministico;818241;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+743;EXPLORATORIO;sem_gabarito;57523162;*;*;*;*
+744;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+745;EXPLORATORIO;sem_gabarito;32079592;*;*;*;*
+746;ANCORA_PONTO_HIFEN;verificado;01.001-000;OK;OK Cidade e UF;São Paulo;SP
+747;ANCORA_LIMPO;provavel;90010000;OK;OK Cidade e UF;Porto Alegre;RS
+748;CEP_INVALIDO;deterministico;-;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+749;CEP_INVALIDO;deterministico;563593899;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+750;EXPLORATORIO;sem_gabarito;95871132;*;*;*;*
+751;EXPLORATORIO;sem_gabarito;84472438;*;*;*;*
+752;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+753;FORA_DO_FILTRO;deterministico;38228959;FORA_DO_FILTRO;;;
+754;NAO_EXISTE_PROVAVEL;provavel;88888888;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+755;EXPLORATORIO;sem_gabarito;33027850;*;*;*;*
+756;ANCORA_HIFEN;provavel;01310-100;OK;OK Cidade e UF;São Paulo;SP
+757;CEP_7_DIGITOS;deterministico;3008403 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+758;FORA_DO_FILTRO;deterministico;58745233;FORA_DO_FILTRO;;;
+759;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+760;CEP_5_DIGITOS;deterministico;83488   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+761;CEP_5_DIGITOS;deterministico;51833   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+762;EXPLORATORIO;sem_gabarito;82514988;*;*;*;*
+763;FORA_DO_FILTRO;deterministico;55603660;FORA_DO_FILTRO;;;
+764;ANCORA_LIMPO;verificado;01001000;OK;OK Cidade e UF;São Paulo;SP
+765;EXPLORATORIO;sem_gabarito;77921956;*;*;*;*
+766;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+767;ANCORA_CIDADE_DIVERGENTE;provavel;01310100;OK;Rever - CIDADE ou UF;São Paulo;SP
+768;ANCORA_PONTO_HIFEN;provavel;90.010-000;OK;OK Cidade e UF;Porto Alegre;RS
+769;CEP_VAZIO;deterministico;        ;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+770;CEP_INVALIDO;deterministico;167722;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+771;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+772;CEP_5_DIGITOS;deterministico;52622   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+773;FORA_DO_FILTRO;deterministico;71767495;FORA_DO_FILTRO;;;
+774;EXPLORATORIO;sem_gabarito;81822838;*;*;*;*
+775;FORA_DO_FILTRO;deterministico;78899674;FORA_DO_FILTRO;;;
+776;NAO_EXISTE_PROVAVEL;provavel;33333333;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+777;CEP_7_DIGITOS;deterministico;8001000 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+778;FORA_DO_FILTRO;deterministico;60315745;FORA_DO_FILTRO;;;
+779;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+780;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+781;FORA_DO_FILTRO;deterministico;48338794;FORA_DO_FILTRO;;;
+782;ANCORA_HIFEN;provavel;70040-010;OK;OK Cidade e UF;Brasília;DF
+783;EXPLORATORIO;sem_gabarito;90523820;*;*;*;*
+784;ANCORA_FLOAT_EXCEL;provavel;30130010.0;OK;OK Cidade e UF;Belo Horizonte;MG
+785;ANCORA_HIFEN;provavel;01310-100;OK;OK Cidade e UF;São Paulo;SP
+786;EXPLORATORIO;sem_gabarito;21131766;*;*;*;*
+787;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+788;EXPLORATORIO;sem_gabarito;79226971;*;*;*;*
+789;CEP_INVALIDO;deterministico;558406327;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+790;CEP_INVALIDO;deterministico;-;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+791;CEP_7_DIGITOS;deterministico;1433937 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+792;CEP_7_DIGITOS;deterministico;5011324 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+793;CEP_INVALIDO;deterministico;ABCDEFGH;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+794;ANCORA_LIMPO;provavel;66010000;OK;OK Cidade e UF;Belém;PA
+795;FORA_DO_FILTRO;deterministico;61062655;FORA_DO_FILTRO;;;
+796;NAO_EXISTE_PROVAVEL;provavel;99999990;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+797;ANCORA_HIFEN;provavel;70040-010;OK;OK Cidade e UF;Brasília;DF
+798;ANCORA_UF_DIVERGENTE;provavel;40020000;OK;Rever - CIDADE ou UF;Salvador;BA
+799;CEP_INVALIDO;deterministico;588909;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+800;EXPLORATORIO;sem_gabarito;91857146;*;*;*;*
+801;EXPLORATORIO;sem_gabarito;47908357;*;*;*;*
+802;ANCORA_CIDADE_DIVERGENTE;provavel;30130010;OK;Rever - CIDADE ou UF;Belo Horizonte;MG
+803;EXPLORATORIO;sem_gabarito;62987498;*;*;*;*
+804;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+805;EXPLORATORIO;sem_gabarito;57782186;*;*;*;*
+806;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+807;EXPLORATORIO;sem_gabarito;10539242;*;*;*;*
+808;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+809;EXPLORATORIO;sem_gabarito;24487948;*;*;*;*
+810;ANCORA_FLOAT_EXCEL;provavel;40020000.0;OK;OK Cidade e UF;Salvador;BA
+811;FORA_DO_FILTRO;deterministico;44241672;FORA_DO_FILTRO;;;
+812;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+813;EXPLORATORIO;sem_gabarito;97497348;*;*;*;*
+814;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+815;FORA_DO_FILTRO;deterministico;32077512;FORA_DO_FILTRO;;;
+816;EXPLORATORIO;sem_gabarito;32002683;*;*;*;*
+817;CEP_7_DIGITOS;deterministico;1373535 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+818;CEP_7_DIGITOS;deterministico;8001000 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+819;FORA_DO_FILTRO;deterministico;09813978;FORA_DO_FILTRO;;;
+820;CEP_INVALIDO;deterministico;549815328;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+821;EXPLORATORIO;sem_gabarito;29594962;*;*;*;*
+822;CEP_INVALIDO;deterministico;00000000;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+823;EXPLORATORIO;sem_gabarito;13694472;*;*;*;*
+824;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+825;ANCORA_UF_DIVERGENTE;provavel;70040010;OK;Rever - CIDADE ou UF;Brasília;DF
+826;NAO_EXISTE_PROVAVEL;provavel;77777777;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+827;FORA_DO_FILTRO;deterministico;30130010;FORA_DO_FILTRO;;;
+828;FORA_DO_FILTRO;deterministico;16114088;FORA_DO_FILTRO;;;
+829;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+830;EXPLORATORIO;sem_gabarito;21491996;*;*;*;*
+831;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+832;NAO_EXISTE_PROVAVEL;provavel;88888888;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+833;FORA_DO_FILTRO;deterministico;85677605;FORA_DO_FILTRO;;;
+834;ANCORA_ESPACOS;provavel;  90010000 ;OK;OK Cidade e UF;Porto Alegre;RS
+835;FORA_DO_FILTRO;deterministico;78782391;FORA_DO_FILTRO;;;
+836;FORA_DO_FILTRO;deterministico;20040020;FORA_DO_FILTRO;;;
+837;FORA_DO_FILTRO;deterministico;81451719;FORA_DO_FILTRO;;;
+838;CEP_7_DIGITOS;deterministico;1637408 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+839;NAO_EXISTE_PROVAVEL;provavel;33333333;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+840;EXPLORATORIO;sem_gabarito;23863264;*;*;*;*
+841;FORA_DO_FILTRO;deterministico;30130010;FORA_DO_FILTRO;;;
+842;CEP_INVALIDO;deterministico;845243862;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+843;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+844;ANCORA_PONTO_HIFEN;verificado;01.001-000;OK;OK Cidade e UF;São Paulo;SP
+845;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+846;FORA_DO_FILTRO;deterministico;95761727;FORA_DO_FILTRO;;;
+847;CEP_INVALIDO;deterministico;218457784;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+848;FORA_DO_FILTRO;deterministico;16730530;FORA_DO_FILTRO;;;
+849;EXPLORATORIO;sem_gabarito;78028464;*;*;*;*
+850;EXPLORATORIO;sem_gabarito;97071905;*;*;*;*
+851;ANCORA_PONTO_HIFEN;provavel;88.010-001;OK;OK Cidade e UF;Florianópolis;SC
+852;EXPLORATORIO;sem_gabarito;15332460;*;*;*;*
+853;FORA_DO_FILTRO;deterministico;89208831;FORA_DO_FILTRO;;;
+854;EXPLORATORIO;sem_gabarito;56501022;*;*;*;*
+855;NAO_EXISTE_PROVAVEL;provavel;55555555;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+856;FORA_DO_FILTRO;deterministico;66010000;FORA_DO_FILTRO;;;
+857;FORA_DO_FILTRO;deterministico;60900282;FORA_DO_FILTRO;;;
+858;FORA_DO_FILTRO;deterministico;01001000;FORA_DO_FILTRO;;;
+859;CEP_VAZIO;deterministico;;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+860;NAO_EXISTE_PROVAVEL;provavel;33333333;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+861;EXPLORATORIO;sem_gabarito;44491551;*;*;*;*
+862;EXPLORATORIO;sem_gabarito;91186491;*;*;*;*
+863;EXPLORATORIO;sem_gabarito;34775553;*;*;*;*
+864;EXPLORATORIO;sem_gabarito;61641090;*;*;*;*
+865;EXPLORATORIO;sem_gabarito;01224928;*;*;*;*
+866;ANCORA_PONTO_HIFEN;provavel;90.010-000;OK;OK Cidade e UF;Porto Alegre;RS
+867;NAO_EXISTE_PROVAVEL;provavel;99999991;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+868;ANCORA_LIMPO;provavel;80010000;OK;OK Cidade e UF;Curitiba;PR
+869;ANCORA_CIDADE_DIVERGENTE;provavel;80010000;OK;Rever - CIDADE ou UF;Curitiba;PR
+870;CEP_INVALIDO;deterministico;M0655016;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+871;EXPLORATORIO;sem_gabarito;12549573;*;*;*;*
+872;CEP_7_DIGITOS;deterministico;8801000 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+873;FORA_DO_FILTRO;deterministico;18461984;FORA_DO_FILTRO;;;
+874;ANCORA_HIFEN;provavel;01310-100;OK;OK Cidade e UF;São Paulo;SP
+875;FORA_DO_FILTRO;deterministico;61172586;FORA_DO_FILTRO;;;
+876;EXPLORATORIO;sem_gabarito;14575695;*;*;*;*
+877;EXPLORATORIO;sem_gabarito;38754052;*;*;*;*
+878;NAO_EXISTE_PROVAVEL;provavel;88888888;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+879;ANCORA_HIFEN;provavel;40020-000;OK;OK Cidade e UF;Salvador;BA
+880;EXPLORATORIO;sem_gabarito;91698659;*;*;*;*
+881;FORA_DO_FILTRO;deterministico;91283192;FORA_DO_FILTRO;;;
+882;ANCORA_ESPACOS;provavel;  01310100 ;OK;OK Cidade e UF;São Paulo;SP
+883;CEP_7_DIGITOS;deterministico;4002000 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+884;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+885;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+886;FORA_DO_FILTRO;deterministico;33696821;FORA_DO_FILTRO;;;
+887;FORA_DO_FILTRO;deterministico;45859154;FORA_DO_FILTRO;;;
+888;FORA_DO_FILTRO;deterministico;30130010;FORA_DO_FILTRO;;;
+889;FORA_DO_FILTRO;deterministico;88010001;FORA_DO_FILTRO;;;
+890;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+891;CEP_7_DIGITOS;deterministico;6669574 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+892;NAO_EXISTE_PROVAVEL;provavel;44444444;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+893;ANCORA_UF_DIVERGENTE;provavel;30130010;OK;Rever - CIDADE ou UF;Belo Horizonte;MG
+894;NAO_EXISTE_PROVAVEL;provavel;44444444;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+895;ANCORA_PONTO_HIFEN;provavel;66.010-000;OK;OK Cidade e UF;Belém;PA
+896;ANCORA_FLOAT_EXCEL;provavel;40020000.0;OK;OK Cidade e UF;Salvador;BA
+897;ANCORA_CIDADE_DIVERGENTE;provavel;90010000;OK;Rever - CIDADE ou UF;Porto Alegre;RS
+898;CEP_INVALIDO;deterministico;375015956;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+899;FORA_DO_FILTRO;deterministico;23602710;FORA_DO_FILTRO;;;
+900;EXPLORATORIO;sem_gabarito;03736701;*;*;*;*
+901;EXPLORATORIO;sem_gabarito;54160423;*;*;*;*
+902;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+903;EXPLORATORIO;sem_gabarito;18818033;*;*;*;*
+904;ANCORA_CIDADE_DIVERGENTE;provavel;90010000;OK;Rever - CIDADE ou UF;Porto Alegre;RS
+905;EXPLORATORIO;sem_gabarito;30995280;*;*;*;*
+906;ANCORA_LIMPO;provavel;66010000;OK;OK Cidade e UF;Belém;PA
+907;EXPLORATORIO;sem_gabarito;18903179;*;*;*;*
+908;CEP_7_DIGITOS;deterministico;8001000 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+909;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+910;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+911;EXPLORATORIO;sem_gabarito;07063075;*;*;*;*
+912;ANCORA_LIMPO;provavel;80010000;OK;OK Cidade e UF;Curitiba;PR
+913;FORA_DO_FILTRO;deterministico;34190767;FORA_DO_FILTRO;;;
+914;ANCORA_LIMPO;provavel;88010001;OK;OK Cidade e UF;Florianópolis;SC
+915;FORA_DO_FILTRO;deterministico;17640836;FORA_DO_FILTRO;;;
+916;NAO_EXISTE_PROVAVEL;provavel;88888888;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+917;ANCORA_CIDADE_DIVERGENTE;verificado;01001000;OK;Rever - CIDADE ou UF;São Paulo;SP
+918;EXPLORATORIO;sem_gabarito;06522348;*;*;*;*
+919;FORA_DO_FILTRO;deterministico;02581299;FORA_DO_FILTRO;;;
+920;ANCORA_PONTO_HIFEN;provavel;80.010-000;OK;OK Cidade e UF;Curitiba;PR
+921;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+922;EXPLORATORIO;sem_gabarito;11402498;*;*;*;*
+923;ANCORA_HIFEN;provavel;66010-000;OK;OK Cidade e UF;Belém;PA
+924;ANCORA_LIMPO;provavel;90010000;OK;OK Cidade e UF;Porto Alegre;RS
+925;EXPLORATORIO;sem_gabarito;45148219;*;*;*;*
+926;ANCORA_LIMPO;provavel;88010001;OK;OK Cidade e UF;Florianópolis;SC
+927;ANCORA_CIDADE_DIVERGENTE;provavel;20040020;OK;Rever - CIDADE ou UF;Rio de Janeiro;RJ
+928;FORA_DO_FILTRO;deterministico;52018025;FORA_DO_FILTRO;;;
+929;EXPLORATORIO;sem_gabarito;69952373;*;*;*;*
+930;CEP_7_DIGITOS;deterministico;4497350 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+931;EXPLORATORIO;sem_gabarito;64688476;*;*;*;*
+932;NAO_EXISTE_PROVAVEL;provavel;55555555;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+933;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+934;NAO_EXISTE_DOC;verificado;99999999;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+935;CEP_5_DIGITOS;deterministico;23091   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+936;CEP_INVALIDO;deterministico;CEP;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+937;ANCORA_HIFEN;provavel;30130-010;OK;OK Cidade e UF;Belo Horizonte;MG
+938;EXPLORATORIO;sem_gabarito;47554302;*;*;*;*
+939;FORA_DO_FILTRO;deterministico;90010000;FORA_DO_FILTRO;;;
+940;ANCORA_PONTO_HIFEN;provavel;90.010-000;OK;OK Cidade e UF;Porto Alegre;RS
+941;CEP_INVALIDO;deterministico;1234567890123;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+942;EXPLORATORIO;sem_gabarito;63036495;*;*;*;*
+943;CEP_VAZIO;deterministico;NULL;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+944;ANCORA_LIMPO;provavel;80010000;OK;OK Cidade e UF;Curitiba;PR
+945;FORA_DO_FILTRO;deterministico;70040010;FORA_DO_FILTRO;;;
+946;ANCORA_ESPACOS;verificado; 01001000;OK;OK Cidade e UF;São Paulo;SP
+947;CEP_INVALIDO;deterministico;12345-67;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+948;FORA_DO_FILTRO;deterministico;40020000;FORA_DO_FILTRO;;;
+949;EXPLORATORIO;sem_gabarito;38122709;*;*;*;*
+950;FORA_DO_FILTRO;deterministico;01310100;FORA_DO_FILTRO;;;
+951;ANCORA_CIDADE_DIVERGENTE;provavel;90010000;OK;Rever - CIDADE ou UF;Porto Alegre;RS
+952;CEP_VAZIO;deterministico;;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+953;EXPLORATORIO;sem_gabarito;27495007;*;*;*;*
+954;EXPLORATORIO;sem_gabarito;24132316;*;*;*;*
+955;ANCORA_LIMPO;provavel;90010000;OK;OK Cidade e UF;Porto Alegre;RS
+956;ANCORA_CIDADE_DIVERGENTE;provavel;40020000;OK;Rever - CIDADE ou UF;Salvador;BA
+957;EXPLORATORIO;sem_gabarito;20488254;*;*;*;*
+958;EXPLORATORIO;sem_gabarito;86529172;*;*;*;*
+959;CEP_VAZIO;deterministico;NULL;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+960;CEP_INVALIDO;deterministico;0000000;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+961;ANCORA_LIMPO;provavel;66010000;OK;OK Cidade e UF;Belém;PA
+962;CEP_5_DIGITOS;deterministico;29677   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+963;CEP_INVALIDO;deterministico;663399;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+964;FORA_DO_FILTRO;deterministico;35041284;FORA_DO_FILTRO;;;
+965;FORA_DO_FILTRO;deterministico;58538023;FORA_DO_FILTRO;;;
+966;EXPLORATORIO;sem_gabarito;87834894;*;*;*;*
+967;EXPLORATORIO;sem_gabarito;54794562;*;*;*;*
+968;FORA_DO_FILTRO;deterministico;49546654;FORA_DO_FILTRO;;;
+969;EXPLORATORIO;sem_gabarito;13728688;*;*;*;*
+970;CEP_7_DIGITOS;deterministico;0815803 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+971;EXPLORATORIO;sem_gabarito;13511642;*;*;*;*
+972;EXPLORATORIO;sem_gabarito;54395610;*;*;*;*
+973;FORA_DO_FILTRO;deterministico;33151434;FORA_DO_FILTRO;;;
+974;EXPLORATORIO;sem_gabarito;92636254;*;*;*;*
+975;CEP_5_DIGITOS;deterministico;11684   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+976;NAO_EXISTE_PROVAVEL;provavel;99999991;NAO_EXISTE;Não Encontrado;não encontrado;não encontrado
+977;EXPLORATORIO;sem_gabarito;98074836;*;*;*;*
+978;CEP_7_DIGITOS;deterministico;9165196 ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+979;ANCORA_UF_DIVERGENTE;provavel;80010000;OK;Rever - CIDADE ou UF;Curitiba;PR
+980;EXPLORATORIO;sem_gabarito;44454704;*;*;*;*
+981;FORA_DO_FILTRO;deterministico;80010000;FORA_DO_FILTRO;;;
+982;EXPLORATORIO;sem_gabarito;56244599;*;*;*;*
+983;EXPLORATORIO;sem_gabarito;88830705;*;*;*;*
+984;FORA_DO_FILTRO;deterministico;52239109;FORA_DO_FILTRO;;;
+985;FORA_DO_FILTRO;deterministico;03133566;FORA_DO_FILTRO;;;
+986;EXPLORATORIO;sem_gabarito;79297150;*;*;*;*
+987;CEP_5_DIGITOS;deterministico;03198   ;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+988;ANCORA_LIMPO;provavel;88010001;OK;OK Cidade e UF;Florianópolis;SC
+989;FORA_DO_FILTRO;deterministico;69689230;FORA_DO_FILTRO;;;
+990;EXPLORATORIO;sem_gabarito;49943216;*;*;*;*
+991;EXPLORATORIO;sem_gabarito;52710751;*;*;*;*
+992;EXPLORATORIO;sem_gabarito;80141669;*;*;*;*
+993;ANCORA_HIFEN;provavel;01310-100;OK;OK Cidade e UF;São Paulo;SP
+994;EXPLORATORIO;sem_gabarito;12145087;*;*;*;*
+995;CEP_VAZIO;deterministico;NULL;CEP_VAZIO;Não Encontrado;não encontrado;não encontrado
+996;EXPLORATORIO;sem_gabarito;91111751;*;*;*;*
+997;CEP_INVALIDO;deterministico;823476;CEP_INVALIDO;Não Encontrado;não encontrado;não encontrado
+998;ANCORA_LIMPO;provavel;88010001;OK;OK Cidade e UF;Florianópolis;SC
+999;ANCORA_CIDADE_DIVERGENTE;provavel;80010000;OK;Rever - CIDADE ou UF;Curitiba;PR
+1000;EXPLORATORIO;sem_gabarito;79296169;*;*;*;*
