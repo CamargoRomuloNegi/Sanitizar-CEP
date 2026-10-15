@@ -44,6 +44,21 @@ Rode `--dry-run` primeiro para ver o número real de CEPs únicos. Se for muito 
 
 ---
 
+## Fonte dos CEPs e reserva (OpenCEP)
+
+Por padrão (`--fonte viacep-reserva`) o ViaCEP é a fonte principal. Se ele não responder
+(`ConnectionError`, bloqueio 429/403, vários CEPs seguidos sem resposta), o CEP é consultado no
+[OpenCEP](https://opencep.com) (mesmo formato: `localidade`/`uf`). Regras de segurança:
+
+* o resultado vindo da reserva fica marcado no diagnóstico (`OK - fonte: OpenCEP (ViaCEP indisponível)`);
+* "CEP não existe" dito só pela reserva **não** é definitivo: vira `ERRO_REDE` (Status "Não Encontrado")
+  e é reconsultado no ViaCEP numa próxima execução;
+* após falha séria o ViaCEP "descansa" 15 min antes de ser testado de novo;
+* `--fonte viacep` usa só o ViaCEP; `--fonte opencep` usa só o OpenCEP.
+
+**Streamlit Cloud:** os apps compartilham IPs de saída de datacenter; o ViaCEP pode recusar conexões
+desses IPs. Para a base completa, rode a linha de comando no seu computador (IP próprio).
+
 ## Estrutura
 
 ```

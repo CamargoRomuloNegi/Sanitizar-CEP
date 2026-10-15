@@ -153,7 +153,7 @@ def _cli(np_csv, *extra):
 
 def test_cli_base_np_cep_filtra_usado_zero_e_nao_adivinha_cep_truncado(np_csv, monkeypatch):
     fake = FakeClient({"01001000": SP, "01001001": SP})
-    monkeypatch.setattr(cli, "ViaCepClient", lambda cfg: fake)
+    monkeypatch.setattr(cli, "build_client", lambda fonte, intervalo: fake)
     assert cli.main(_cli(np_csv)) == 0  # padrão: CEP de 7 dígitos NÃO é completado
 
     saida, _ = read_table(np_csv.with_name("NP_CEP_sanitizado.csv"))
@@ -178,7 +178,7 @@ def test_cli_base_np_cep_filtra_usado_zero_e_nao_adivinha_cep_truncado(np_csv, m
 
 
 def test_cli_dry_run_mostra_numeros_sem_consultar(np_csv, monkeypatch, capsys):
-    monkeypatch.setattr(cli, "ViaCepClient", lambda cfg: pytest.fail("não deveria criar cliente"))
+    monkeypatch.setattr(cli, "build_client", lambda fonte, intervalo: pytest.fail("não deveria criar cliente"))
     assert cli.main(_cli(np_csv, "--dry-run")) == 0
     out = capsys.readouterr().out
     assert "Linhas no escopo: 6" in out and "fora do filtro (não consultadas): 3" in out

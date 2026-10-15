@@ -161,3 +161,77 @@ def test_cabecalhos_nao_vazam_dados_pessoais(make_client):
     client.lookup("01001000")
     assert "User-Agent" in session.last_headers
     assert "@" not in " ".join(session.last_headers.values())
+
+
+# ---------------------------------------------------------------- fonte reserva (OpenCEP)
+def _fallback(viacep_handler, opencep_handler, cooldown=900.0):
+    from cep_sanitizer.client import FallbackClient, ViaCepClient, opencep_config, viacep_config
+    from conftest import FakeSession, FakeTime
+
+    ft = FakeTime()
+    sp, so = FakeSession(viacep_handler), FakeSession(opencep_handler)
+
+    class _S(FakeSession):  # OpenCEP: .../v1/<cep> (sem /json/)
+        def get(self, url, timeout=None, headers=None):
+            cep = url.rstrip("/").split("/")[-1]
+            self.calls.append(cep)
+            return self.handler(cep, self.calls.count(cep))
+
+    so = _S(opencep_handler)
+    kw = dict(min_interval=0.0, jitter=0.0)
+    prim = ViaCepClient(viacep_config(max_retries=0, max_failed_ceps_in_row=2, **kw), session=sp,
+                        sleep=ft.sleep, clock=ft.clock)
+    sec = ViaCepClient(opencep_config(max_retries=0, **kw), session=so, sleep=ft.sleep, clock=ft.clock)
+    return FallbackClient(prim, sec, cooldown=cooldown, clock=ft.clock), sp, so, ft
+
+
+def _boom(cep, n):
+    import requests
+    raise requests.ConnectionError("reset")
+
+
+def test_viacep_ok_nao_toca_na_reserva():
+    from conftest import ok_response
+    fb, sp, so, _ = _fallback(lambda c, n: ok_response(), _boom)
+    assert fb.lookup("01001000").status == "OK" and so.calls == []
+
+
+def test_viacep_cai_e_reserva_resolve_com_marca_de_fonte():
+    from conftest import ok_response
+    fb, sp, so, _ = _fallback(_boom, lambda c, n: ok_response("Campinas", "SP"))
+    r = fb.lookup("13010000")
+    assert (r.status, r.cidade, r.uf) == ("OK", "Campinas", "SP") and "fonte: OpenCEP" in r.detalhe
+
+
+def test_inexistente_na_reserva_nao_e_definitivo():
+    from conftest import FakeResponse
+    fb, *_ = _fallback(_boom, lambda c, n: FakeResponse(404))
+    r = fb.lookup("99999999")
+    assert r.status == "ERRO_REDE" and r.status not in __import__("cep_sanitizer.models", fromlist=["x"]).DEFINITIVOS
+
+
+def test_viacep_descansa_no_cooldown_e_volta_depois():
+    from conftest import ok_response
+    fb, sp, so, ft = _fallback(_boom, lambda c, n: ok_response(), cooldown=900)
+    for cep in ("01001000", "01001001", "01001002"):  # 2 falhas seguidas abrem o disjuntor
+        fb.lookup(cep)
+    antes = len(sp.calls)
+    fb.lookup("01001003")
+    assert len(sp.calls) == antes  # em cooldown: ViaCEP não é consultado
+    ft.now += 901
+    fb.lookup("01001004")
+    assert len(sp.calls) == antes + 1  # cooldown passou: testa o ViaCEP de novo
+
+
+def test_nao_existe_no_viacep_e_definitivo_sem_reserva():
+    from conftest import FakeResponse
+    fb, sp, so, _ = _fallback(lambda c, n: FakeResponse(200, {"erro": "true"}), _boom)
+    assert fb.lookup("99999999").status == "NAO_EXISTE" and so.calls == []
+
+
+def test_opencep_404_vira_nao_existe_quando_e_a_fonte_unica():
+    from conftest import FakeResponse
+    from cep_sanitizer.client import build_client
+    c = build_client("opencep", 0.0)
+    assert c.cfg.nome == "OpenCEP" and c.cfg.http_404_nao_existe
+    assert c.cfg.url_template.format(base=c.cfg.base_url, cep="01001000").endswith("/v1/01001000")

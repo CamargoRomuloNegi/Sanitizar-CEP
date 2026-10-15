@@ -52,6 +52,9 @@ class ClientConfig:
     max_throttle_events: int = 3       # 429 seguidos até abortar
     max_failed_ceps_in_row: int = 5    # CEPs seguidos com falha até abortar
     user_agent: str = "cep-sanitizer/1.0 (saneamento de base; consultas espaçadas)"
+    nome: str = "ViaCEP"                       # nome da fonte (aparece em mensagens e no diagnóstico)
+    url_template: str = "{base}/{cep}/json/"   # como montar a URL de um CEP
+    http_404_nao_existe: bool = False          # fontes estáticas (OpenCEP) respondem 404 p/ CEP inexistente
 
 
 class RateLimiter:
@@ -105,7 +108,7 @@ class ViaCepClient:
     # ------------------------------------------------------------------ API pública
     def lookup(self, cep: str) -> LookupResult:
         """Consulta um CEP de 8 dígitos. Levanta BlockedError/ServiceUnavailableError."""
-        url = f"{self.cfg.base_url}/{cep}/json/"
+        url = self.cfg.url_template.format(base=self.cfg.base_url, cep=cep)
         timeout = (self.cfg.connect_timeout, self.cfg.read_timeout)
         attempt = 0
         last_status, last_detail = ERRO_REDE, "falha desconhecida"
@@ -128,6 +131,9 @@ class ViaCepClient:
                     else:
                         self._on_success()
                         return outcome
+                elif code == 404 and self.cfg.http_404_nao_existe:
+                    self._on_success()
+                    return LookupResult(cep, NAO_EXISTE, detalhe=f"CEP não consta na base do {self.cfg.nome}")
                 elif code == 400:
                     self._on_success()
                     return LookupResult(cep, CEP_INVALIDO, detalhe="HTTP 400 (formato rejeitado pela API)")
@@ -136,7 +142,7 @@ class ViaCepClient:
                     continue
                 elif code == 403:
                     raise BlockedError(
-                        "HTTP 403 do ViaCEP: acesso possivelmente bloqueado. "
+                        f"HTTP 403 do {self.cfg.nome}: acesso possivelmente bloqueado. "
                         "Interrompido para não agravar; aguarde antes de retomar."
                     )
                 elif code >= 500:
@@ -150,8 +156,7 @@ class ViaCepClient:
             self._sleep(self._backoff_delay(attempt))
 
     # ------------------------------------------------------------------ internos
-    @staticmethod
-    def _parse_200(cep: str, resp: Any) -> Optional[LookupResult]:
+    def _parse_200(self, cep: str, resp: Any) -> Optional[LookupResult]:
         try:
             data = resp.json()
         except ValueError:
@@ -160,7 +165,7 @@ class ViaCepClient:
             return None
         erro = data.get("erro")
         if erro is True or (isinstance(erro, str) and erro.strip().lower() == "true"):
-            return LookupResult(cep, NAO_EXISTE, detalhe="CEP não consta na base do ViaCEP")
+            return LookupResult(cep, NAO_EXISTE, detalhe=f"CEP não consta na base do {self.cfg.nome}")
         cidade = str(data.get("localidade") or "").strip()
         uf = str(data.get("uf") or "").strip().upper()
         if not cidade or not uf:
@@ -179,7 +184,7 @@ class ViaCepClient:
         if self._failed_ceps_in_row >= self.cfg.max_failed_ceps_in_row:
             raise ServiceUnavailableError(
                 f"{self._failed_ceps_in_row} CEPs seguidos falharam (último: {detail}). "
-                "Rede ou ViaCEP indisponível; progresso já salvo."
+                f"Rede ou {self.cfg.nome} indisponível; progresso já salvo."
             )
         log.warning("CEP %s falhou: %s - %s", cep, status, detail)
         return LookupResult(cep, status, detalhe=detail)
@@ -189,7 +194,7 @@ class ViaCepClient:
         if self._throttle_events >= self.cfg.max_throttle_events:
             raise BlockedError(
                 f"HTTP 429 recebido {self._throttle_events} vezes seguidas: limite ou bloqueio "
-                "do ViaCEP. Interrompido; aguarde (possivelmente horas) antes de retomar."
+                f"do {self.cfg.nome}. Interrompido; aguarde (possivelmente horas) antes de retomar."
             )
         pause = self._retry_after(resp)
         if pause is None:
@@ -205,3 +210,83 @@ class ViaCepClient:
         if value is not None and str(value).strip().isdigit():
             return float(str(value).strip())
         return None
+
+
+# --------------------------------------------------------------------------- fontes
+def viacep_config(**kw: Any) -> ClientConfig:
+    return ClientConfig(**kw)
+
+
+def opencep_config(**kw: Any) -> ClientConfig:
+    """OpenCEP: resposta no mesmo formato do ViaCEP (localidade/uf); 404 = CEP inexistente."""
+    kw.setdefault("base_url", "https://opencep.com/v1")
+    kw.setdefault("url_template", "{base}/{cep}")
+    kw.setdefault("nome", "OpenCEP")
+    kw.setdefault("http_404_nao_existe", True)
+    return ClientConfig(**kw)
+
+
+class FallbackClient:
+    """ViaCEP primeiro; se a rede/ViaCEP falhar, usa a fonte reserva (OpenCEP).
+
+    * Resultado da reserva vem marcado no diagnóstico ("fonte: OpenCEP").
+    * "Não existe" na reserva NÃO é definitivo (a base dela pode ser diferente da do ViaCEP):
+      vira ERRO_REDE para ser reconsultado no ViaCEP numa próxima execução.
+    * Depois de uma falha séria do ViaCEP (bloqueio, ou vários CEPs seguidos sem resposta), o
+      ViaCEP descansa ``cooldown`` segundos e só então é testado de novo (não é martelado).
+    """
+
+    def __init__(self, primary: Any, secondary: Any, cooldown: float = 900.0,
+                 clock: Callable[[], float] = time.monotonic) -> None:
+        self.primary, self.secondary = primary, secondary
+        self.cooldown = cooldown
+        self._clock = clock
+        self._primary_off_until: Optional[float] = None
+        self.fallback_used = 0
+
+    @property
+    def requests_made(self) -> int:
+        return getattr(self.primary, "requests_made", 0) + getattr(self.secondary, "requests_made", 0)
+
+    def _primary_available(self) -> bool:
+        return self._primary_off_until is None or self._clock() >= self._primary_off_until
+
+    def lookup(self, cep: str) -> LookupResult:
+        if self._primary_available():
+            try:
+                res = self.primary.lookup(cep)
+            except (BlockedError, ServiceUnavailableError) as exc:
+                self._primary_off_until = self._clock() + self.cooldown
+                log.warning("%s fora do ar (%s); usando a fonte reserva por %.0f s", self.primary.cfg.nome, exc, self.cooldown)
+            else:
+                if res.status not in (ERRO_REDE, ERRO_API):
+                    self._primary_off_until = None
+                    return res
+        return self._via_secondary(cep)
+
+    def _via_secondary(self, cep: str) -> LookupResult:
+        res = self.secondary.lookup(cep)  # se a reserva também abortar, a exceção segue para o processor
+        self.fallback_used += 1
+        nome = self.secondary.cfg.nome
+        if res.status == OK:
+            return LookupResult(cep, OK, res.cidade, res.uf, detalhe=f"fonte: {nome} ({self.primary.cfg.nome} indisponível)")
+        if res.status == NAO_EXISTE:
+            return LookupResult(cep, ERRO_REDE, detalhe=f"{self.primary.cfg.nome} indisponível e {nome} não conhece o CEP (confirmar no {self.primary.cfg.nome} depois)")
+        return res
+
+
+FONTES = ("viacep-reserva", "viacep", "opencep")
+
+
+def build_client(fonte: str = "viacep-reserva", min_interval: float = 1.0) -> Any:
+    """viacep-reserva (padrão): ViaCEP com OpenCEP de reserva | viacep | opencep."""
+    if fonte == "viacep":
+        return ViaCepClient(viacep_config(min_interval=min_interval))
+    if fonte == "opencep":
+        return ViaCepClient(opencep_config(min_interval=min_interval))
+    if fonte == "viacep-reserva":
+        return FallbackClient(
+            ViaCepClient(viacep_config(min_interval=min_interval, max_retries=1)),
+            ViaCepClient(opencep_config(min_interval=min_interval)),
+        )
+    raise ValueError(f"fonte desconhecida: {fonte}")

@@ -195,7 +195,7 @@ def _args(np_csv, *extra):
 
 def test_cli_detecta_cidade_e_uf_e_gera_status(np_csv, monkeypatch, capsys):
     fake = FakeClient({"01001000": SP, "01001001": SP, "01001002": SP})
-    monkeypatch.setattr(cli, "ViaCepClient", lambda cfg: fake)
+    monkeypatch.setattr(cli, "build_client", lambda fonte, intervalo: fake)
     assert cli.main(_args(np_csv)) == 0
     saida, _ = read_table(np_csv.with_name("NP_CEP_sanitizado.csv"))
     assert saida["Status"].tolist() == [STATUS_OK, STATUS_REVER, "", STATUS_NAO_ENCONTRADO]
@@ -205,14 +205,14 @@ def test_cli_detecta_cidade_e_uf_e_gera_status(np_csv, monkeypatch, capsys):
 
 
 def test_cli_sem_comparacao_nao_cria_status(np_csv, monkeypatch):
-    monkeypatch.setattr(cli, "ViaCepClient", lambda cfg: FakeClient({"01001000": SP, "01001001": SP}))
+    monkeypatch.setattr(cli, "build_client", lambda fonte, intervalo: FakeClient({"01001000": SP, "01001001": SP}))
     assert cli.main(_args(np_csv, "--sem-comparacao")) == 0
     saida, _ = read_table(np_csv.with_name("NP_CEP_sanitizado.csv"))
     assert "Status" not in saida.columns
 
 
 def test_cli_colunas_de_comparacao_informadas_a_mao(np_csv, monkeypatch):
-    monkeypatch.setattr(cli, "ViaCepClient", lambda cfg: FakeClient({"01001000": SP, "01001001": SP}))
+    monkeypatch.setattr(cli, "build_client", lambda fonte, intervalo: FakeClient({"01001000": SP, "01001001": SP}))
     args = _args(np_csv, "--colunas", "CEP,Municipio,Estado,Bairro,Usado", "--coluna-cidade", "Municipio", "--coluna-uf", "Estado")
     assert cli.main(args) == 0
     saida, _ = read_table(np_csv.with_name("NP_CEP_sanitizado.csv"))

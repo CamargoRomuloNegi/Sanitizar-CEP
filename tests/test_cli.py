@@ -37,7 +37,7 @@ def _args(entrada, *extra):
 
 def test_execucao_completa(entrada, monkeypatch):
     fake = FakeClient({"01001000": ("São Paulo", "SP")})
-    monkeypatch.setattr(cli, "ViaCepClient", lambda cfg: fake)
+    monkeypatch.setattr(cli, "build_client", lambda fonte, intervalo: fake)
     assert cli.main(_args(entrada, "--completar-zero")) == 0  # "1001000" perdeu o zero no Excel
     saida, _ = read_table(entrada.with_name("base_sanitizado.csv"))
     assert saida["Cidade Retornada"].tolist() == ["São Paulo", "São Paulo", "", "não encontrado"]
@@ -48,7 +48,7 @@ def test_execucao_completa(entrada, monkeypatch):
 
 
 def test_dry_run_nao_consulta_nem_grava(entrada, monkeypatch, capsys):
-    monkeypatch.setattr(cli, "ViaCepClient", lambda cfg: pytest.fail("não deveria criar cliente"))
+    monkeypatch.setattr(cli, "build_client", lambda fonte, intervalo: pytest.fail("não deveria criar cliente"))
     assert cli.main(_args(entrada, "--dry-run")) == 0
     assert "CEPs únicos válidos: 1" in capsys.readouterr().out
     assert not entrada.with_name("base_sanitizado.csv").exists()
@@ -56,7 +56,7 @@ def test_dry_run_nao_consulta_nem_grava(entrada, monkeypatch, capsys):
 
 def test_bloqueio_grava_saida_parcial_e_retorna_2(entrada, monkeypatch):
     fake = FakeClient(fail_with=BlockedError("429"), fail_at=0)
-    monkeypatch.setattr(cli, "ViaCepClient", lambda cfg: fake)
+    monkeypatch.setattr(cli, "build_client", lambda fonte, intervalo: fake)
     assert cli.main(_args(entrada)) == 2
     saida, _ = read_table(entrada.with_name("base_sanitizado.csv"))
     assert saida["Diagnóstico CEP"].str.startswith("PENDENTE").sum() == 1  # "1001000" não é completado: inválido
@@ -64,10 +64,10 @@ def test_bloqueio_grava_saida_parcial_e_retorna_2(entrada, monkeypatch):
 
 def test_retomada_usa_o_cache(entrada, monkeypatch):
     primeiro = FakeClient({"01001000": ("São Paulo", "SP")})
-    monkeypatch.setattr(cli, "ViaCepClient", lambda cfg: primeiro)
+    monkeypatch.setattr(cli, "build_client", lambda fonte, intervalo: primeiro)
     cli.main(_args(entrada))
     segundo = FakeClient()
-    monkeypatch.setattr(cli, "ViaCepClient", lambda cfg: segundo)
+    monkeypatch.setattr(cli, "build_client", lambda fonte, intervalo: segundo)
     assert cli.main(_args(entrada)) == 0
     assert segundo.calls == []
 

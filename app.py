@@ -8,13 +8,29 @@ Executar localmente:  streamlit run app.py
 
 from __future__ import annotations
 
+import sys
 import time
+from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
+# Garante que a pasta do projeto esteja no caminho de importação, qualquer que seja
+# o diretório de trabalho do Streamlit Cloud.
+_RAIZ = Path(__file__).resolve().parent
+if str(_RAIZ) not in sys.path:
+    sys.path.insert(0, str(_RAIZ))
+
+if not (_RAIZ / "cep_sanitizer" / "__init__.py").exists():
+    st.error(
+        "A pasta `cep_sanitizer/` não está no repositório, ao lado do `app.py`. "
+        "Envie a pasta inteira (com `__init__.py`, `cache.py`, `cli.py`, `client.py`, "
+        "`io_utils.py`, `models.py`, `normalizer.py`, `processor.py`) para o GitHub e reinicie o app."
+    )
+    st.stop()
+
 from cep_sanitizer.cache import JournalCache
-from cep_sanitizer.client import ClientConfig, ViaCepClient
+from cep_sanitizer.client import build_client
 from cep_sanitizer.io_utils import list_sheets, looks_headerless, read_table, write_table
 from cep_sanitizer.processor import (
     COL_CIDADE,
@@ -72,6 +88,17 @@ with st.sidebar:
     intervalo = st.number_input(
         "Intervalo entre consultas (s)", min_value=0.5, max_value=10.0, value=1.0, step=0.1,
         help="Quanto maior, mais seguro. O piso é 0,5 s para proteger seu acesso.",
+    )
+    fonte = st.selectbox(
+        "Fonte dos CEPs",
+        ["viacep-reserva", "viacep", "opencep"],
+        format_func={
+            "viacep-reserva": "ViaCEP, com OpenCEP de reserva (recomendado)",
+            "viacep": "Só ViaCEP",
+            "opencep": "Só OpenCEP",
+        }.get,
+        help="A reserva só entra quando o ViaCEP não responde (ex.: bloqueio do IP do Streamlit Cloud). "
+             "Os CEPs resolvidos pela reserva ficam marcados no diagnóstico.",
     )
     max_consultas = st.number_input(
         "Máx. de consultas novas por execução", min_value=1, max_value=5000, value=500, step=50,
@@ -144,7 +171,7 @@ if not no_header and looks_headerless(columns):
         "Os nomes de coluna lidos parecem dados (ex.: só dígitos). Se o arquivo não tem "
         "cabeçalho, marque 'A planilha NÃO tem linha de cabeçalho'; senão o primeiro registro é perdido."
     )
-st.dataframe(df.head(5), use_container_width=True)
+st.dataframe(df.head(5), width="stretch")
 
 cep_col = st.selectbox(
     "Coluna do CEP", columns,
@@ -253,8 +280,8 @@ if work["to_query"] > 5000:
 st.subheader("3. Executar")
 st.caption("Não mexa nos controles da página enquanto roda: isso interrompe a execução (o que já foi consultado fica no cache).")
 if st.button("Iniciar consultas", type="primary"):
-    client = ViaCepClient(ClientConfig(min_interval=float(intervalo)))
-    bar = st.progress(0.0, text="Consultando o ViaCEP...")
+    client = build_client(fonte, float(intervalo))
+    bar = st.progress(0.0, text="Consultando CEPs...")
     started = time.monotonic()
 
     def on_progress(done: int, total: int, _result) -> None:
@@ -305,4 +332,4 @@ if result:
         "Baixar planilha preenchida", result["data"], file_name=result["name"], mime=result["mime"]
     )
     st.caption(f"Pré-visualização (200 primeiras linhas). Colunas novas: {COL_CIDADE}, {COL_UF}, {COL_DIAG}.")
-    st.dataframe(result["preview"], use_container_width=True)
+    st.dataframe(result["preview"], width="stretch")

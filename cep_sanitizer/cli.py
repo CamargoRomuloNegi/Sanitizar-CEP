@@ -35,7 +35,7 @@ from pathlib import Path
 from typing import Optional
 
 from .cache import JournalCache
-from .client import ClientConfig, ViaCepClient
+from .client import FONTES, build_client
 from .io_utils import looks_headerless, read_table, write_table_to_path
 from .processor import (
     COL_DIAG,
@@ -89,6 +89,10 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--cache", help="arquivo de cache JSONL (padrão: <entrada>.cache_cep.jsonl)")
     p.add_argument("--intervalo", type=_interval, default=1.0, help="segundos entre consultas (padrão 1.0)")
+    p.add_argument(
+        "--fonte", choices=FONTES, default="viacep-reserva",
+        help="viacep-reserva (padrão): ViaCEP e, se cair/bloquear, OpenCEP | viacep | opencep",
+    )
     p.add_argument("--max-consultas", type=int, help="máximo de consultas NOVAS nesta execução")
     p.add_argument("--aba", help="aba do XLSX (padrão: primeira)")
     p.add_argument("--sep", help="separador do CSV (padrão: detecta)")
@@ -232,7 +236,7 @@ def main(argv: Optional[list[str]] = None) -> int:
 
         previous_handler = signal.signal(signal.SIGINT, _on_sigint)
 
-        client = ViaCepClient(ClientConfig(min_interval=args.intervalo))
+        client = build_client(args.fonte, args.intervalo)
         started = time.monotonic()
 
         def _progress(done: int, total: int, _result) -> None:
