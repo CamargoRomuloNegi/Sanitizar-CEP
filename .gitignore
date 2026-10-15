@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.streamlit/secrets.toml
+
+# Progresso e saídas de execuções reais (podem ser grandes e são dados da sua base)
+*.cache_cep.jsonl
+cache_cep*.jsonl
+*_sanitizado.csv
+*_sanitizado.xlsx
+saida_*.csv
+dados_exemplo/amostra_base_*
